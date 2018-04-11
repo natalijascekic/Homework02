@@ -11,3 +11,17 @@
 * Use main() function to test your solution.
 ===================================================
 """
+
+def nzd(a,b):
+
+    a = abs(a)
+    b = abs(b)
+    z = (a-b)
+
+    if z == 0:
+        return min(a,b)
+
+    else:
+        return nzd(z,min(a,b))
+
+print (nzd(-24,6))
